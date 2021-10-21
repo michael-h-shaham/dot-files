@@ -157,7 +157,7 @@ source-noetic() {
 }
 
 source-mr() {
-    source-ros1
+    source-noetic
     source ~/mr_ws/devel/setup.bash
     export TURTLEBOT3_MODEL=burger
 }
