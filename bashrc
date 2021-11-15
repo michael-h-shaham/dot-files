@@ -167,8 +167,5 @@ source-mr() {
 
 ## Pull common git repos
 git-pull-common() {
-    cd ~/Documents/courses/advanced-control-systems/ && git pull origin main
-    cd ~/Documents/courses/mobile-robotics/ && git pull origin main
-    cd ~/Documents/courses/sparsity-optimization/ && git pull origin main
-    cd ~/Documents/notable-notes/ && git pull origin main
+    cd ~/Documents/courses/ && git pull origin main
 }
