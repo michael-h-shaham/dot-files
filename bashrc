@@ -167,8 +167,13 @@ source-mr() {
 
 ## Pull common git repos
 git-pull-common() {
-    cd ~/Documents/courses/ && git pull origin main
+    cd ~/Documents/neu-courses/ && git pull origin main
     cd ~/Documents/everything/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
     cd ~/Documents/
 }
+
+## Gurobi
+export GUROBI_HOME="/opt/gurobi950/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
