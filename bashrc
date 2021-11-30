@@ -161,7 +161,7 @@ source-noetic() {
 
 source-mr() {
     source-noetic
-    source ~/mr_ws/devel/setup.bash
+    source ~/mr_ws/devel_isolated/setup.bash
     export TURTLEBOT3_MODEL=burger
 }
 
@@ -170,6 +170,7 @@ git-pull-common() {
     cd ~/Documents/neu-courses/ && git pull origin main
     cd ~/Documents/everything/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
+    cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/
 }
 
