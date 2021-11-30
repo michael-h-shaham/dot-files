@@ -171,7 +171,6 @@ git-pull-common() {
     cd ~/Documents/everything/ && git pull origin main
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
-    cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/
 }
 
