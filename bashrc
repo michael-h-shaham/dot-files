@@ -160,6 +160,9 @@ git-pull-common() {
     cd ~/Documents/
 }
 
+## Julia ##
+export PATH="$PATH:/home/mshaham/julia-1.7.0/bin"
+
 ## Gurobi
 export GUROBI_HOME="/opt/gurobi950/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
