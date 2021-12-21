@@ -145,24 +145,10 @@ source-galactic() {
     export ROS_DOMAIN_ID=0
 }
 
-source-galactic-nav() {
-    source-galactic
-
-    ## Nav2 ##
-    export TURTLEBOT3_MODEL=burger
-    export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/galactic/share/turtlebot3_gazebo/models
-}
-
 ## ROS 1 Noetic ##
 
 source-noetic() {
     source /opt/ros/noetic/setup.bash
-}
-
-source-mr() {
-    source-noetic
-    source ~/mr_ws/devel/setup.bash
-    export TURTLEBOT3_MODEL=burger
 }
 
 ## Pull common git repos
