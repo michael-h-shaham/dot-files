@@ -154,7 +154,7 @@ source-noetic() {
 ## Pull common git repos
 git-pull-common() {
     cd ~/Documents/neu-courses/ && git pull origin main
-    cd ~/Documents/everything/ && git pull origin main
+    cd ~/Documents/LaTeX_templates/ && git pull origin main
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
     cd ~/Documents/convoy/ && git pull origin main
