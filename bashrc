@@ -151,6 +151,11 @@ source-noetic() {
     source /opt/ros/noetic/setup.bash
 }
 
+source-vast() {
+    source-noetic
+    source ~/vast_ws/devel/setup.bash
+}
+
 ## Pull common git repos
 git-pull-common() {
     cd ~/Documents/neu-courses/ && git pull origin main
