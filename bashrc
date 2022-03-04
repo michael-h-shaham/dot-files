@@ -156,6 +156,11 @@ source-vast() {
     source ~/vast_ws/devel/setup.bash
 }
 
+source-jackal() {
+    source-noetic
+    source ~/jackal_ws/devel/setup.bash
+}
+
 ## Pull common git repos
 git-pull-common() {
     cd ~/Documents/neu-courses/ && git pull origin main
