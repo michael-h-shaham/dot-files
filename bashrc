@@ -151,16 +151,6 @@ source-noetic() {
     source /opt/ros/noetic/setup.bash
 }
 
-source-vast() {
-    source-noetic
-    source ~/vast_ws/devel/setup.bash
-}
-
-source-jackal() {
-    source-noetic
-    source ~/jackal_ws/devel/setup.bash
-}
-
 ## Pull common git repos
 git-pull-common() {
     cd ~/Documents/neu-courses/ && git pull origin main
@@ -172,7 +162,7 @@ git-pull-common() {
 }
 
 ## Julia ##
-export PATH="$PATH:/home/mshaham/julia-1.7.1/bin"
+export PATH="$PATH:/home/mshaham/julia-1.7.2/bin"
 
 ## Gurobi
 export GUROBI_HOME="/opt/gurobi950/linux64"
