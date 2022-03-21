@@ -165,10 +165,10 @@ git-pull-common() {
 export PATH="$PATH:/home/mshaham/julia-1.7.2/bin"
 
 ## Gurobi
-export GUROBI_HOME="/opt/gurobi950/linux64"
+export GUROBI_HOME="/opt/gurobi951/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-export GRB_LICENSE_FILE="/opt/gurobi950/gurobi.lic"
+export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
 
 ## Mosek
 export MOSEK_HOME="/opt/mosek"
