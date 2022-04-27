@@ -152,7 +152,7 @@ source-noetic() {
 git-pull-common() {
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
-    cd ~/Documents/convoy/ && git pull origin main
+    cd ~/convoy/convoy_sim/ && git pull origin main
     cd ~/Documents/
 }
 
