@@ -138,11 +138,8 @@ unset __conda_setup
 
 ## ROS 2  Galactic ##
 
-source-galactic() {
-    source /opt/ros/galactic/setup.bash
-    source /usr/share/colcon_cd/function/colcon_cd.sh
-    export _colcon_cd_root=~/ros2_install
-    export ROS_DOMAIN_ID=0
+source-foxy() {
+    source /opt/ros/foxy/setup.bash
 }
 
 ## ROS 1 Noetic ##
