@@ -140,6 +140,7 @@ unset __conda_setup
 
 source-foxy() {
     source /opt/ros/foxy/setup.bash
+    export ROS_DOMAIN_ID=0
 }
 
 ## ROS 1 Noetic ##
