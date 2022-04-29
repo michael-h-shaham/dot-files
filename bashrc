@@ -141,6 +141,13 @@ unset __conda_setup
 source-foxy() {
     source /opt/ros/foxy/setup.bash
     export ROS_DOMAIN_ID=0
+    source /usr/share/colcon_cd/function/colcon_cd.sh
+    export _colcon_cd_root=/opt/ros/foxy/
+}
+
+source-convoy() {
+    source-foxy
+    source ~/cvy_ws/install/setup.bash
 }
 
 ## ROS 1 Noetic ##
