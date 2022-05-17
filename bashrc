@@ -147,6 +147,7 @@ source-foxy() {
     export ROS_DOMAIN_ID=0
     source /usr/share/colcon_cd/function/colcon_cd.sh
     export _colcon_cd_root=/opt/ros/foxy/
+    source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 }
 
 source-convoy() {
