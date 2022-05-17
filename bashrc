@@ -88,7 +88,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -136,7 +136,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 ## Map caps to escape ##
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 
@@ -162,12 +161,18 @@ source-noetic() {
 }
 
 ## Pull common git repos
+
 git-pull-common() {
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
     cd ~/convoy/convoy_sim/ && git pull origin main
     cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
     cd ~
+}
+
+git-pull-convoy-ros() {
+    cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
+    cd -
 }
 
 ## Julia ##
