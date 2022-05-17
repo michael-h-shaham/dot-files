@@ -136,6 +136,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+## Map caps to escape ##
+dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
+
 ## ROS 2  Galactic ##
 
 source-foxy() {
