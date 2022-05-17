@@ -30,4 +30,12 @@
 
     "window.openFoldersInNewWindow": "on",
     "cmake.configureOnOpen": false,
+
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "julia.enableTelemetry": true,
+
+    "git.confirmSync": false,
 }
