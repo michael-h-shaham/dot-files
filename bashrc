@@ -191,6 +191,7 @@ git-pull-convoy() {
 git-pull-vehicle() {
     cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
+    cd ~
 }
 
 ## Update dot files ##
