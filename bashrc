@@ -119,9 +119,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
+########################## Michael's additions below ##########################
+
 alias mkdir="mkdir -p"
 
-# >>> conda initialize >>>
+## >>> conda initialize >>> ##
+
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
