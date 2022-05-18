@@ -88,7 +88,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -155,6 +155,11 @@ source-convoy() {
     source ~/cvy_ws/install/setup.bash
 }
 
+source-vehicle() {
+    source-convoy
+    export ROS_DOMAIN_ID=$1
+}
+
 ## ROS 1 Noetic ##
 
 source-noetic() {
@@ -171,12 +176,16 @@ git-pull-common() {
     cd ~
 }
 
+git-pull-convoy-ros() {
+    cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
+    cd -
+}
+
 ## Update dot files
 update-dot-files() {
     cp ~/Documents/dot-files/bashrc ~/.bashrc
     cp ~/Documents/dot-files/vimrc ~/.vimrc
     cp ~/Documents/dot-files/tmux.conf ~/.tmux.conf
-}
 
 ## Julia ##
 
