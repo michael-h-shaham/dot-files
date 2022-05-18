@@ -144,7 +144,6 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 
 source-foxy() {
     source /opt/ros/foxy/setup.bash
-    export ROS_DOMAIN_ID=0
     source /usr/share/colcon_cd/function/colcon_cd.sh
     export _colcon_cd_root=/opt/ros/foxy/
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
@@ -166,8 +165,9 @@ source-noetic() {
     source /opt/ros/noetic/setup.bash
 }
 
-## Pull common git repos
+## Pull common git repos ##
 
+# for use on Michael's computers
 git-pull-common() {
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
@@ -176,12 +176,22 @@ git-pull-common() {
     cd ~
 }
 
-git-pull-convoy-ros() {
+# for use on convoy laptops/desktops
+git-pull-convoy() {
     cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
-    cd -
+    cd ~/Documents/convoy/convoy_sim/ && git pull origin main
+    cd ~/Documents/dot-files/ && git pull origin main
+    cd ~
 }
 
-## Update dot files
+# for use on vehicles
+git-pull-vehicle() {
+    cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
+    cd ~/Documents/dot-files/ && git pull origin main
+}
+
+## Update dot files ##
+
 update-dot-files() {
     cp ~/Documents/dot-files/bashrc ~/.bashrc
     cp ~/Documents/dot-files/vimrc ~/.vimrc
