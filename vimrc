@@ -20,6 +20,10 @@ endif
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
