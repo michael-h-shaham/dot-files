@@ -136,8 +136,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 ## Map caps to escape ##
+
 dconf write /org/gnome/desktop/input-sources/xkb-options "['caps:escape']"
 
 ## ROS 2  Galactic ##
@@ -162,6 +162,7 @@ source-noetic() {
 }
 
 ## Pull common git repos
+
 git-pull-common() {
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
@@ -170,16 +171,26 @@ git-pull-common() {
     cd ~
 }
 
+## Update dot files
+update-dot-files() {
+    cp ~/Documents/dot-files/bashrc ~/.bashrc
+    cp ~/Documents/dot-files/vimrc ~/.vimrc
+    cp ~/Documents/dot-files/tmux.conf ~/.tmux.conf
+}
+
 ## Julia ##
+
 export PATH="$PATH:/home/mshaham/julia-1.7.2/bin"
 
-## Gurobi
+## Gurobi ##
+
 export GUROBI_HOME="/opt/gurobi951/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
 
-## Mosek
+## Mosek ## 
+
 export MOSEK_HOME="/opt/mosek"
 export PATH="${PATH}:${MOSEK_HOME}/9.3/tools/platform/linux64x86/bin"
 export MOSEKLM_LICENSE_FILE="${MOSEK_HOME}/mosek.lic"
