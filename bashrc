@@ -154,6 +154,11 @@ source-convoy() {
     source ~/cvy_ws/install/setup.bash
 }
 
+source-vehicle() {
+    source-convoy
+    export ROS_DOMAIN_ID=$1
+}
+
 ## ROS 1 Noetic ##
 
 source-noetic() {
