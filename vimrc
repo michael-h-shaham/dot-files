@@ -62,3 +62,6 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
+
+" Add vertical color bar
+:set colorcolumn=80
