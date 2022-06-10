@@ -20,6 +20,9 @@ endif
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
+" set tab size and shift width to 4
+set ts=2 sw=2
+
 " backup directories and backup locations
 
 silent !mkdir ~/.vim > /dev/null 2>&1
@@ -62,6 +65,3 @@ augroup END
 if has('syntax') && has('eval')
   packadd! matchit
 endif
-
-" Add vertical color bar
-:set colorcolumn=80
