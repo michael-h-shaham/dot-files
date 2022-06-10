@@ -174,24 +174,22 @@ source-noetic() {
 git-pull-common() {
     cd ~/Documents/resources/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
-    cd ~/convoy/convoy_sim/ && git pull origin main
-    cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
+    cd ~/cvy_ws/src/convoy/ && git pull origin main
     cd ~
 }
 
 # for use on convoy laptops/desktops
 git-pull-convoy() {
-    cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
-    cd ~/Documents/convoy/convoy_sim/ && git pull origin main
+    cd ~/cvy_ws/src/convoy/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
-    cd ~
+    cd ~/cvy_ws/
 }
 
 # for use on vehicles
 git-pull-vehicle() {
-    cd ~/cvy_ws/src/convoy_ros/ && git pull origin main
+    cd ~/cvy_ws/src/convoy/ && git pull origin main
     cd ~/Documents/dot-files/ && git pull origin main
-    cd ~
+    cd ~/cvy_ws/
 }
 
 ## Update dot files ##
