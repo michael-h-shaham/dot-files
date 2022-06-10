@@ -23,6 +23,9 @@ source $VIMRUNTIME/defaults.vim
 " set tab size and shift width to 4
 set ts=2 sw=2
 
+" add vertical color bar
+:set colorcolumn=80
+
 " backup directories and backup locations
 
 silent !mkdir ~/.vim > /dev/null 2>&1
