@@ -21,7 +21,9 @@ endif
 source $VIMRUNTIME/defaults.vim
 
 " set tab size and shift width to 4
-set ts=2 sw=2
+:set ts=2
+:set sw=2 
+:set expandtab
 
 " add vertical color bar
 :set colorcolumn=80
