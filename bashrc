@@ -198,6 +198,8 @@ update-dot-files() {
     cp ~/Documents/dot-files/bashrc ~/.bashrc
     cp ~/Documents/dot-files/vimrc ~/.vimrc
     cp ~/Documents/dot-files/tmux.conf ~/.tmux.conf
+    source ~/.bashrc
+    tmux source-file ~/.tmux.conf
 }
 
 ## Julia ##

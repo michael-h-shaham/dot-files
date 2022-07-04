@@ -29,12 +29,10 @@ source $VIMRUNTIME/defaults.vim
 :set colorcolumn=80
 
 " backup directories and backup locations
-
 silent !mkdir ~/.vim > /dev/null 2>&1
 silent !mkdir ~/.vim/backup > /dev/null 2>&1
 silent !mkdir ~/.vim/swap > /dev/null 2>&1
 silent !mkdir ~/.vim/undo > /dev/null 2>&1
-
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
