@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export TERM=xterm-256color
+
 # use vim keybindings in terminal
 set -o vi
 
@@ -191,11 +193,11 @@ git-pull-vehicle() {
 ## Update dot files ##
 
 update-dot-files() {
-    cp ~/Documents/dot-files/bashrc ~/.bashrc
-    cp ~/Documents/dot-files/vimrc ~/.vimrc
-    cp ~/Documents/dot-files/tmux.conf ~/.tmux.conf
+    cp ~/Documents/dot-files/.bashrc ~/.bashrc
+    cp ~/Documents/dot-files/.vimrc ~/.vimrc
+    cp ~/Documents/dot-files/.tmux.conf ~/.tmux.conf
+    cp ~/Documents/dot-files/vscode_settings ~/.config/Code/User/settings.json
     source ~/.bashrc
-    tmux source-file ~/.tmux.conf
 }
 
 ## Julia ##
