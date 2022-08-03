@@ -26,7 +26,7 @@ source $VIMRUNTIME/defaults.vim
 :set expandtab
 
 " add vertical color bar
-:set colorcolumn=80
+:set colorcolumn=81
 
 " backup directories and backup locations
 silent !mkdir ~/.vim > /dev/null 2>&1
