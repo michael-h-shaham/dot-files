@@ -28,6 +28,10 @@ source $VIMRUNTIME/defaults.vim
 " add vertical color bar
 :set colorcolumn=81
 
+" always show file name (second line sets it to be full path)
+" set laststatus=2
+set statusline+=%F
+
 " backup directories and backup locations
 silent !mkdir ~/.vim > /dev/null 2>&1
 silent !mkdir ~/.vim/backup > /dev/null 2>&1
