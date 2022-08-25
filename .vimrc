@@ -29,7 +29,7 @@ source $VIMRUNTIME/defaults.vim
 :set colorcolumn=81
 
 " always show file name (second line sets it to be full path)
-" set laststatus=2
+set laststatus=2
 set statusline+=%F
 
 " backup directories and backup locations
