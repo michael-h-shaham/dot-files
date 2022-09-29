@@ -150,6 +150,11 @@ source-foxy() {
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 }
 
+source-toy() {
+    source-foxy
+    source ~/toy_ws/install/local_setup.bash
+}
+
 source-convoy() {
     source-foxy
     source ~/cvy_ws/install/local_setup.bash
