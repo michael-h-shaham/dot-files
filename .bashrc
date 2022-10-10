@@ -150,11 +150,6 @@ source-foxy() {
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 }
 
-source-toy() {
-    source-foxy
-    source ~/toy_ws/install/local_setup.bash
-}
-
 source-convoy() {
     source-foxy
     source ~/cvy_ws/install/local_setup.bash
@@ -165,9 +160,26 @@ source-vehicle() {
     export ROS_DOMAIN_ID=$1
 }
 
+source-toy() {
+    source-foxy
+    source ~/toy_ws/install/local_setup.bash
+}
+
 source-sim() {
     source-foxy
     source /sim_ws/install/local_setup.bash
+}
+
+build-cvy() {
+    cd ~/cvy_ws/
+    colcon build --symlink-install
+    cd -
+}
+
+build-sim() {
+    cd /sim_ws/
+    colcon build --symlink-install
+    cd -
 }
 
 ## ROS 1 Noetic ##
@@ -181,6 +193,7 @@ source-noetic() {
 # for use on Michael's computers
 git-pull-common() {
     cd ~/Documents/resources/ && git pull origin main
+    cd ~/Documents/neu-courses/ && git pull origin main
     cd ~/dot-files/ && git pull origin main
     cd ~/cvy_ws/src/convoy/ && git pull origin main
     cd ~
@@ -206,7 +219,7 @@ update-dot-files() {
     cp ~/dot-files/.bashrc ~/.bashrc
     cp ~/dot-files/.vimrc ~/.vimrc
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
-    cp ~/dot-files/vscode_settings.json ~/.config/Code/User/settings.json
+    # cp ~/dot-files/vscode_settings.json ~/.config/Code/User/settings.json
     source ~/.bashrc
 }
 
