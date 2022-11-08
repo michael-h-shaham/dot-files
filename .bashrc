@@ -125,22 +125,6 @@ fi
 
 alias mkdir="mkdir -p"
 
-## >>> conda initialize >>> ##
-
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
-. "/home/mshaham/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
-    else
-export PATH="/home/mshaham/anaconda3/bin:$PATH"  # commented out by conda initialize
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 ## ROS 2  Galactic ##
 
 source-foxy() {
@@ -170,7 +154,7 @@ source-sim() {
     source /sim_ws/install/local_setup.bash
 }
 
-build-cvy() {
+build-convoy() {
     cd ~/cvy_ws/
     colcon build --symlink-install
     cd -
@@ -237,5 +221,23 @@ export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
 ## Mosek ## 
 
 export MOSEK_HOME="/opt/mosek"
-export PATH="${PATH}:${MOSEK_HOME}/9.3/tools/platform/linux64x86/bin"
+# export PATH="${PATH}:${MOSEK_HOME}/10.0/tools/platform/linux64x86/bin"
 export MOSEKLM_LICENSE_FILE="${MOSEK_HOME}/mosek.lic"
+
+## Conda ##
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mshaham/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mshaham/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
