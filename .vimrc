@@ -20,10 +20,14 @@ endif
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-" set tab size and shift width to 4
-:set ts=2
-:set sw=2 
+" set tab stop, soft tab stop, and shift width to 2 by default
+:set ts=4
+:set sts=4 
+:set sw=4 
 :set expandtab
+" set ts, sts, sw for different file types
+autocmd FileType python setlocal ts=4 sts=4 sw=4
+autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 
 " add vertical color bar
 :set colorcolumn=81
