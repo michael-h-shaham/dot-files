@@ -1,5 +1,7 @@
 # Vim setup
 
+## Extensions setup: code completion and commenting
+
 First, install Node.js following the instructions 
 [here](https://github.com/nodesource/distributions/blob/master/README.md).
 
@@ -31,3 +33,10 @@ When you actually edit a C++ file for the first time, you will also have to run:
 ```bash
 :CocCommand clangd.install
 ```
+
+## Using commenting extension
+
+`ctrl-/` doesn't work on Mac or Ubuntu so I use `ctrl-_` instead. To comment a 
+line, just hit `ctrl-_`. You can also highlight a bunch of lines in visual 
+mode and then comment them all at once. Note that the comment is a toggle 
+feature, so if a line is commented, `ctrl-_` will uncomment.
