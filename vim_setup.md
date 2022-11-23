@@ -2,7 +2,7 @@
 
 ## Extensions setup: code completion and commenting
 
-First, install Node.js following the instructions 
+Install Node.js following the instructions 
 [here](https://github.com/nodesource/distributions/blob/master/README.md).
 
 Install a minimalist Vim plugin manager by following the instructions
