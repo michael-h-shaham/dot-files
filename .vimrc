@@ -6,8 +6,9 @@ call plug#end()
 
 " Map commentary keycodes to ctrl-/ on linux (hopefully), ctrl-_ on mac
 xmap <C-_> <Plug>Commentary
-nmap <C-_> <Plug>Commentary
-imap <C-_> <Plug>CommentaryLineA
+omap <C-_> <Plug>Commentary
+nmap <C-_> <Plug>CommentaryLine
+imap <C-_> <Esc><Plug>CommentaryLineA
 
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
 " utf-8 byte sequence.
