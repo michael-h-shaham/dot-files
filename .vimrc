@@ -10,7 +10,7 @@ omap <C-_> <Plug>Commentary
 nmap <C-_> <Plug>CommentaryLine
 imap <C-_> <Esc><Plug>CommentaryLineA
 
-# make it so lines below and above count from 1
+" make it so lines below and above count from 1
 :set number relativenumber
 
 " make it so I can copy across files
