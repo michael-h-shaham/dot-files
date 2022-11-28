@@ -44,6 +44,7 @@ source $VIMRUNTIME/defaults.vim
 " set ts, sts, sw for different file types
 autocmd FileType python setlocal ts=4 sts=4 sw=4
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
+autocmd FileType cmake setlocal ts=2 sts=2 sw=2
 
 " add vertical color bar
 :set colorcolumn=81
