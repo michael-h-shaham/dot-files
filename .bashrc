@@ -125,7 +125,7 @@ fi
 
 alias mkdir="mkdir -p"
 
-## ROS 2  Galactic ##
+## ROS 2 ##
 
 source-foxy() {
     source /opt/ros/foxy/setup.bash
@@ -134,19 +134,26 @@ source-foxy() {
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 }
 
-source-convoy() {
+source-humble() {
+    source /opt/ros/humble/setup.bash
+    source /usr/share/colcon_cd/function/colcon_cd.sh
+    export _colcon_cd_root=/opt/ros/humble/
+    source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+}
+
+source-convoy-foxy() {
     source-foxy
     source ~/cvy_ws/install/local_setup.bash
 }
 
-source-vehicle() {
-    source-convoy
-    export ROS_DOMAIN_ID=$1
+source-convoy-humble() {
+    source-humble
+    source ~/cvy_ws/install/local_setup.bash
 }
 
-source-toy() {
-    source-foxy
-    source ~/toy_ws/install/local_setup.bash
+source-vehicle() {
+    source-convoy-foxy
+    export ROS_DOMAIN_ID=$1
 }
 
 source-sim() {
@@ -166,7 +173,7 @@ build-sim() {
     cd -
 }
 
-## ROS 1 Noetic ##
+## ROS 1 ##
 
 source-noetic() {
     source /opt/ros/noetic/setup.bash
