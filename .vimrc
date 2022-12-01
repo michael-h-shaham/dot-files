@@ -1,7 +1,12 @@
 " plug ins
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
 call plug#begin()
+    Plug 'VundleVim/Vundle.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-commentary'
+    Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 " Map commentary keycodes to ctrl-/ on linux (hopefully), ctrl-_ on mac
@@ -14,7 +19,7 @@ imap <C-_> <Esc><Plug>CommentaryLineA
 :set number relativenumber
 
 " make it so I can copy across files
-set clipboard^=unnamed
+set clipboard^=unnamedplus
 
 " An example for a vimrc file.
 "
@@ -42,9 +47,10 @@ source $VIMRUNTIME/defaults.vim
 :set sw=4 
 :set expandtab
 " set ts, sts, sw for different file types
-autocmd FileType python setlocal ts=4 sts=4 sw=4
-autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 autocmd FileType cmake setlocal ts=2 sts=2 sw=2
+autocmd FileType cpp setlocal ts=2 sts=2 sw=2
+autocmd FileType python setlocal ts=4 sts=4 sw=4
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2
 
 " add vertical color bar
 :set colorcolumn=81
