@@ -210,7 +210,14 @@ update-dot-files() {
     cp ~/dot-files/.bashrc ~/.bashrc
     cp ~/dot-files/.vimrc ~/.vimrc
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
-    # cp ~/dot-files/vscode_settings.json ~/.config/Code/User/settings.json
+    cp ~/dot-files/vscode_settings.json ~/.config/Code/User/settings.json
+    source ~/.bashrc
+}
+
+update-vehicle-dot-files() {
+    cp ~/dot-files/.bashrc ~/.bashrc
+    cp ~/dot-files/.vimrc_simple ~/.vimrc
+    cp ~/dot-files/.tmux.conf ~/.tmux.conf
     source ~/.bashrc
 }
 
