@@ -158,17 +158,21 @@ source-vehicle() {
 
 source-sim() {
     source-foxy
-    source /sim_ws/install/local_setup.bash
+    source /root/sim_ws/install/local_setup.bash
 }
 
 build-convoy() {
     cd ~/cvy_ws/
     colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    cp build/compile_commands.json src/convoy_ros/convoy_control/
+    cp build/compile_commands.json src/convoy_ros/convoy_perception/
+    cp build/compile_commands.json src/convoy_ros/convoy_planning/
+    cp build/compile_commands.json src/convoy_ros/convoy_safety/
     cd -
 }
 
 build-sim() {
-    cd /sim_ws/
+    cd /root/sim_ws/
     colcon build --symlink-install
     cd -
 }
@@ -210,7 +214,6 @@ update-dot-files() {
     cp ~/dot-files/.bashrc ~/.bashrc
     cp ~/dot-files/.vimrc ~/.vimrc
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
-    cp ~/dot-files/vscode_settings.json ~/.config/Code/User/settings.json
     source ~/.bashrc
 }
 
