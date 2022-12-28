@@ -19,7 +19,7 @@ imap <C-_> <Esc><Plug>CommentaryLineA
 :set number relativenumber
 
 " make it so I can copy across files
-set clipboard^=unnamedplus
+set clipboard^=unnamed,unnamedplus
 
 " An example for a vimrc file.
 "
