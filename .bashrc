@@ -165,6 +165,9 @@ build-convoy() {
     cd ~/cvy_ws/
     colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     cp build/compile_commands.json src/convoy_ros/
+    cp build/convoy_control/compile_commands.json src/convoy_ros/convoy_control/
+    cp build/convoy_pure_pursuit/compile_commands.json src/convoy_ros/convoy_pure_pursuit/
+    cp build/convoy_linear_feedback/compile_commands.json src/convoy_ros/convoy_linear_feedback/
     cd -
 }
 
@@ -210,6 +213,7 @@ git-pull-vehicle() {
 update-dot-files() {
     cp ~/dot-files/.bashrc ~/.bashrc
     cp ~/dot-files/.vimrc ~/.vimrc
+    cp ~/dot-files/.vimrc_simple ~/.vimrc_simple
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
     source ~/.bashrc
 }

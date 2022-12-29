@@ -2,7 +2,7 @@
 :set number relativenumber
 
 " make it so I can copy across files
-set clipboard^=unnamedplus
+set clipboard^=unnamed,nnamedplus
 
 " An example for a vimrc file.
 "
