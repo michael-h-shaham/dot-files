@@ -210,35 +210,29 @@ update-vehicle-dot-files() {
 
 ## Julia ##
 
-if [ "$(uname)" == "Linux" ]; then
-    export PATH="$PATH:/home/mshaham/julia/bin"
-fi
+export PATH="$PATH:/opt/julia/bin"
 
 ## Gurobi ##
 
-if [ "$(uname)" == "Linux" ]; then
-    export GUROBI_HOME="/opt/gurobi951/linux64"
-    export PATH="${PATH}:${GUROBI_HOME}/bin"
-    export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-    export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
-fi
+export GUROBI_HOME="/opt/gurobi951/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
 
 ## Conda ##
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-if [ "$(uname)" == "Linux" ]; then
-    __conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
+__conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mshaham/anaconda3/etc/profile.d/conda.sh"
     else
-        if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
-            . "/home/mshaham/anaconda3/etc/profile.d/conda.sh"
-        else
-            export PATH="/home/mshaham/anaconda3/bin:$PATH"
-        fi
+        export PATH="/home/mshaham/anaconda3/bin:$PATH"
     fi
-    unset __conda_setup
 fi
+unset __conda_setup
 # <<< conda initialize <<<
 
