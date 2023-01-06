@@ -79,6 +79,14 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+update-dot-files() {
+    cp ~/dot-files/.bashrc ~/.bashrc
+    cp ~/dot-files/.vimrc ~/.vimrc
+    cp ~/dot-files/.vimrc_simple ~/.vimrc_simple
+    cp ~/dot-files/.tmux.conf ~/.tmux.conf
+    source ~/.bashrc
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
