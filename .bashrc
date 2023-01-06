@@ -185,24 +185,7 @@ source-noetic() {
 
 ## Pull common git repos ##
 
-# for use on Michael's computers
-git-pull-common() {
-    cd ~/Documents/resources/ && git pull origin main
-    cd ~/Documents/neu-courses/ && git pull origin main
-    cd ~/dot-files/ && git pull origin main
-    cd ~/cvy_ws/src/convoy/ && git pull origin main
-    cd ~
-}
-
-# for use on convoy laptops/desktops
 git-pull-convoy() {
-    cd ~/cvy_ws/src/convoy/ && git pull origin main
-    cd ~/dot-files/ && git pull origin main
-    cd ~/cvy_ws/
-}
-
-# for use on vehicles
-git-pull-vehicle() {
     cd ~/cvy_ws/src/convoy/ && git pull origin main
     cd ~/dot-files/ && git pull origin main
     cd ~/cvy_ws/
@@ -227,35 +210,35 @@ update-vehicle-dot-files() {
 
 ## Julia ##
 
-export PATH="$PATH:/home/mshaham/julia/bin"
+if [ "$(uname)" == "Linux" ]; then
+    export PATH="$PATH:/home/mshaham/julia/bin"
+fi
 
 ## Gurobi ##
 
-export GUROBI_HOME="/opt/gurobi951/linux64"
-export PATH="${PATH}:${GUROBI_HOME}/bin"
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
-
-## Mosek ## 
-
-export MOSEK_HOME="/opt/mosek"
-# export PATH="${PATH}:${MOSEK_HOME}/10.0/tools/platform/linux64x86/bin"
-export MOSEKLM_LICENSE_FILE="${MOSEK_HOME}/mosek.lic"
+if [ "$(uname)" == "Linux" ]; then
+    export GUROBI_HOME="/opt/gurobi951/linux64"
+    export PATH="${PATH}:${GUROBI_HOME}/bin"
+    export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+    export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
+fi
 
 ## Conda ##
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mshaham/anaconda3/etc/profile.d/conda.sh"
+if [ "$(uname)" == "Linux" ]; then
+    __conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        export PATH="/home/mshaham/anaconda3/bin:$PATH"
+        if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/mshaham/anaconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/mshaham/anaconda3/bin:$PATH"
+        fi
     fi
+    unset __conda_setup
 fi
-unset __conda_setup
 # <<< conda initialize <<<
 
