@@ -80,11 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 update-dot-files() {
-    cp ~/dot-files/.bashrc ~/.bashrc
+    cp ~/dot-files/.zshrc ~/.zshrc
     cp ~/dot-files/.vimrc ~/.vimrc
     cp ~/dot-files/.vimrc_simple ~/.vimrc_simple
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
-    source ~/.bashrc
+    source ~/.zshrc
 }
 
 # export MANPATH="/usr/local/man:$MANPATH"
