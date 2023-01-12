@@ -51,6 +51,7 @@ autocmd FileType cmake setlocal ts=2 sts=2 sw=2
 autocmd FileType cpp setlocal ts=2 sts=2 sw=2
 autocmd FileType python setlocal ts=4 sts=4 sw=4
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2
+autocmd FileType xml setlocal ts=2 sts=2 sw=2
 
 " add vertical color bar
 :set colorcolumn=81
