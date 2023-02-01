@@ -166,13 +166,14 @@ build-convoy() {
     colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     cp build/compile_commands.json src/convoy_ros/
     cp build/convoy_control/compile_commands.json src/convoy_ros/convoy_control/
-    cp build/convoy_pure_pursuit/compile_commands.json src/convoy_ros/convoy_pure_pursuit/
-    cp build/convoy_linear_feedback/compile_commands.json src/convoy_ros/convoy_linear_feedback/
+    cp build/convoy_safety/compile_commands.json src/convoy_ros/convoy_safety/
+    cp build/lateral_control/compile_commands.json src/convoy_ros/lateral_control/
+    cp build/longitudinal_control/compile_commands.json src/convoy_ros/longitudinal_control/
     cd -
 }
 
 build-sim() {
-    cd /root/sim_ws/
+    cd /root/cvy_ws/
     colcon build --symlink-install
     cd -
 }
