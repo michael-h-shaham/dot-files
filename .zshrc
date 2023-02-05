@@ -86,7 +86,7 @@ update-dot-files() {
   source ~/.zshrc
 }
 
-git-pull-mac() {
+git-pull-common() {
   cd ~/dot-files && git pull
   cd ~/Documents/convoy_notes && git pull
   cd ~/Documents/courses && git pull
