@@ -97,6 +97,11 @@ git-pull-common() {
   cd ~/
 }
 
+git-pull-convoy() {
+  cd ~/projects/convoy_ros && git pull
+  git submodule update --init --recursive --remote
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

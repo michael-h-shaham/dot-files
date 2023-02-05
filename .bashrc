@@ -194,9 +194,9 @@ git-pull-common() {
 }
 
 git-pull-convoy() {
-    cd ~/cvy_ws/src/convoy && git pull 
     cd ~/dot-files && git pull origin main
-    cd ~/cvy_ws
+    cd ~/cvy_ws/src/convoy && git pull 
+    git submodule update --init --recursive --remote
 }
 
 ## Update dot files ##
