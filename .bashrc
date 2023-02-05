@@ -191,6 +191,7 @@ git-pull-common() {
     cd ~/Documents/courses && git pull
     cd ~/Documents/neu-courses && git pull
     cd ~/Documents/resources && git pull
+    git submodule update --init --recursive --remote
 }
 
 git-pull-convoy() {
