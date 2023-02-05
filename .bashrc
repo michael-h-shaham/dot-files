@@ -196,14 +196,12 @@ git-pull-common() {
 }
 
 git-pull-convoy() {
-    cd ~/dot-files && git pull
     cd ~/cvy_ws/src/convoy_ros && git pull 
     git submodule update --init --recursive --remote
 }
 
 git-pull-vehicle() {
-    cd ~/dot-files && git pull 
-    cd ~/cvy_ws/src/convoy_ros && git checkout main && git pull
+    cd ~/cvy_ws/src/convoy_ros && git pull
     git submodule update --init --recursive --remote
 }
 

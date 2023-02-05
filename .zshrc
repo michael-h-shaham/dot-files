@@ -80,10 +80,12 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 update-dot-files() {
+  cd ~/dot-files && git pull
   cp ~/dot-files/.zshrc ~/.zshrc
   cp ~/dot-files/.vimrc ~/.vimrc
   cp ~/dot-files/.tmux.conf ~/.tmux.conf
   source ~/.zshrc
+  cd -
 }
 
 git-pull-common() {
