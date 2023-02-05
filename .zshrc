@@ -80,11 +80,21 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 update-dot-files() {
-    cp ~/dot-files/.zshrc ~/.zshrc
-    cp ~/dot-files/.vimrc ~/.vimrc
-    cp ~/dot-files/.vimrc_simple ~/.vimrc_simple
-    cp ~/dot-files/.tmux.conf ~/.tmux.conf
-    source ~/.zshrc
+  cp ~/dot-files/.zshrc ~/.zshrc
+  cp ~/dot-files/.vimrc ~/.vimrc
+  cp ~/dot-files/.tmux.conf ~/.tmux.conf
+  source ~/.zshrc
+}
+
+git-pull-mac() {
+  cd ~/dot-files && git pull
+  cd ~/Documents/convoy_notes && git pull
+  cd ~/Documents/courses && git pull
+  cd ~/Documents/general_notes && git pull
+  cd ~/Documents/LaTeX_templates && git pull
+  cd ~/Documents/neu-courses && git pull
+  cd ~/Documents/resources && git pull
+  cd ~/
 }
 
 # export MANPATH="/usr/local/man:$MANPATH"
