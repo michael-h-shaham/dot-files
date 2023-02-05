@@ -196,13 +196,13 @@ git-pull-common() {
 }
 
 git-pull-convoy() {
-    cd ~/dot-files && git pull origin main
+    cd ~/dot-files && git pull
     cd ~/cvy_ws/src/convoy_ros && git pull 
     git submodule update --init --recursive --remote
 }
 
 git-pull-vehicle() {
-    cd ~/dot-files && git pull origin main
+    cd ~/dot-files && git pull 
     cd ~/cvy_ws/src/convoy_ros && git checkout main && git pull
     git submodule update --init --recursive --remote
 }
@@ -210,18 +210,22 @@ git-pull-vehicle() {
 ## Update dot files ##
 
 update-dot-files() {
+    cd ~/dot-files && git pull
     cp ~/dot-files/.bashrc ~/.bashrc
     cp ~/dot-files/.vimrc ~/.vimrc
     cp ~/dot-files/.vimrc_simple ~/.vimrc_simple
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
     source ~/.bashrc
+    cd -
 }
 
 update-vehicle-dot-files() {
+    cd ~/dot-files && git pull
     cp ~/dot-files/.bashrc ~/.bashrc
     cp ~/dot-files/.vimrc_simple ~/.vimrc
     cp ~/dot-files/.tmux.conf ~/.tmux.conf
     source ~/.bashrc
+    cd -
 }
 
 ## Julia ##
