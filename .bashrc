@@ -186,10 +186,17 @@ source-noetic() {
 
 ## Pull common git repos ##
 
+git-pull-common() {
+    cd ~/dot-files && git pull
+    cd ~/Documents/courses && git pull
+    cd ~/Documents/neu-courses && git pull
+    cd ~/Documents/resources && git pull
+}
+
 git-pull-convoy() {
-    cd ~/cvy_ws/src/convoy/ && git pull origin main
-    cd ~/dot-files/ && git pull origin main
-    cd ~/cvy_ws/
+    cd ~/cvy_ws/src/convoy && git pull 
+    cd ~/dot-files && git pull origin main
+    cd ~/cvy_ws
 }
 
 ## Update dot files ##
