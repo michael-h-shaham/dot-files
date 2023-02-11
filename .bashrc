@@ -227,18 +227,15 @@ update-vehicle-dot-files() {
 }
 
 ## Julia ##
-
 export PATH="$PATH:/opt/julia/bin"
 
 ## Gurobi ##
-
 export GUROBI_HOME="/opt/gurobi951/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
 export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
 
 ## Conda ##
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -253,4 +250,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+## LaTeX ##
+export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 
