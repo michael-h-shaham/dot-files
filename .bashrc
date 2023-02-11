@@ -189,6 +189,7 @@ source-noetic() {
 
 git-pull-common() {
     cd ~/dot-files && git pull
+    cd ~/projects/convoy_notebooks && git pull
     cd ~/Documents/courses && git pull
     cd ~/Documents/neu-courses && git pull
     cd ~/Documents/resources && git pull
