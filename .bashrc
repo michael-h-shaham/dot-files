@@ -134,31 +134,14 @@ source-foxy() {
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 }
 
-source-humble() {
-    source /opt/ros/humble/setup.bash
-    source /usr/share/colcon_cd/function/colcon_cd.sh
-    export _colcon_cd_root=/opt/ros/humble/
-    source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
-}
-
-source-convoy-foxy() {
+source-convoy() {
     source-foxy
-    source ~/cvy_ws/install/local_setup.bash
-}
-
-source-convoy-humble() {
-    source-humble
     source ~/cvy_ws/install/local_setup.bash
 }
 
 source-vehicle() {
     source-convoy-foxy
     export ROS_DOMAIN_ID=$1
-}
-
-source-sim() {
-    source-foxy
-    source /root/sim_ws/install/local_setup.bash
 }
 
 build-convoy() {
@@ -170,12 +153,6 @@ build-convoy() {
     cp build/convoy_safety/compile_commands.json src/convoy_ros/convoy_safety/
     cp build/lateral_control/compile_commands.json src/convoy_ros/lateral_control/
     cp build/longitudinal_control/compile_commands.json src/convoy_ros/longitudinal_control/
-    cd -
-}
-
-build-sim() {
-    cd /root/cvy_ws/
-    colcon build --symlink-install
     cd -
 }
 
