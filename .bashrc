@@ -137,6 +137,7 @@ source-foxy() {
 source-convoy() {
     source-foxy
     source ~/cvy_ws/install/local_setup.bash
+    export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 }
 
 source-vehicle() {
