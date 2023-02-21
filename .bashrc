@@ -176,11 +176,13 @@ git-pull-common() {
 }
 
 git-pull-convoy() {
+    cd ~/cvy_ws/src/pozyx_ros && git pull 
     cd ~/cvy_ws/src/convoy_ros && git pull 
     git submodule update --init --recursive --remote
 }
 
 git-pull-vehicle() {
+    cd ~/cvy_ws/src/pozyx_ros && git pull
     cd ~/cvy_ws/src/convoy_ros && git pull
     git submodule update --init --recursive --remote
 }
