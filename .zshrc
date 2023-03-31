@@ -102,6 +102,8 @@ git-pull-common() {
 git-pull-convoy() {
   cd ~/projects/convoy_ros && git pull
   git submodule update --init --recursive --remote
+  cd ~/projects/convoy_notebooks && git pull
+  cd ~/projects/pozyx_ros && git pull
 }
 
 # export MANPATH="/usr/local/man:$MANPATH"
