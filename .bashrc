@@ -212,10 +212,10 @@ update-vehicle-dot-files() {
 export PATH="$PATH:/opt/julia/bin"
 
 ## Gurobi ##
-export GUROBI_HOME="/opt/gurobi951/linux64"
+export GUROBI_HOME="/opt/gurobi/linux64"
 export PATH="${PATH}:${GUROBI_HOME}/bin"
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-export GRB_LICENSE_FILE="/opt/gurobi951/gurobi.lic"
+export GRB_LICENSE_FILE="/opt/gurobi/gurobi.lic"
 
 ## Conda ##
 # >>> conda initialize >>>
