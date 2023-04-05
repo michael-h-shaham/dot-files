@@ -90,20 +90,19 @@ update-dot-files() {
 
 git-pull-common() {
   cd ~/dot-files && git pull
-  cd ~/Documents/convoy_notes && git pull
-  cd ~/Documents/courses && git pull
-  cd ~/Documents/general_notes && git pull
+  cd ~/Documents/notes && git pull
   cd ~/Documents/LaTeX_templates && git pull
   cd ~/Documents/neu-courses && git pull
   cd ~/Documents/resources && git pull
+  git submodule update --init --recursive --remote
   cd ~/Documents
 }
 
 git-pull-convoy() {
-  cd ~/projects/convoy_ros && git pull
-  git submodule update --init --recursive --remote
   cd ~/projects/convoy_notebooks && git pull
   cd ~/projects/pozyx_ros && git pull
+  cd ~/projects/convoy_ros && git pull
+  git submodule update --init --recursive --remote
   cd ~/projects
 }
 
