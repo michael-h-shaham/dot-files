@@ -236,4 +236,5 @@ unset __conda_setup
 
 ## LaTeX ##
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
+export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
 
