@@ -89,6 +89,7 @@ update-dot-files() {
 }
 
 git-pull-common() {
+  cd ~/michael-shaham.github.io && git pull
   cd ~/dot-files && git pull
   cd ~/Documents/notes && git pull
   cd ~/Documents/LaTeX_templates && git pull
