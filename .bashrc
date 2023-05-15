@@ -166,7 +166,8 @@ source-noetic() {
 ## Pull common git repos ##
 
 git-pull-common() {
-    cd ~/michael-shaham.github.io && git pull
+    cd ~/Documents/michael-shaham.github.io && git pull
+    cd ~/Documents/mshaham-resume-cv && git pull
     cd ~/dot-files && git pull
     cd ~/Documents/notes && git pull
     cd ~/Documents/LaTeX_templates && git pull
