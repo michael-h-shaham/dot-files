@@ -96,7 +96,6 @@ git-pull-common() {
   cd ~/Documents/LaTeX_templates && git pull
   cd ~/Documents/neu-courses && git pull
   cd ~/Documents/resources && git pull
-  git submodule update --init --recursive --remote
   cd ~/Documents
 }
 
@@ -104,7 +103,6 @@ git-pull-convoy() {
   cd ~/projects/convoy_notebooks && git pull
   cd ~/projects/pozyx_ros && git pull
   cd ~/projects/convoy_ros && git pull
-  git submodule update --init --recursive --remote
   cd ~/projects
 }
 
