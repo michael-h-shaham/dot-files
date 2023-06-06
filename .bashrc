@@ -149,11 +149,6 @@ build-convoy() {
     cd ~/cvy_ws/
     colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
     cp build/compile_commands.json src/convoy_ros/
-    cp build/convoy_control/compile_commands.json src/convoy_ros/convoy_control/
-    cp build/convoy_perception/compile_commands.json src/convoy_ros/convoy_perception/
-    cp build/convoy_safety/compile_commands.json src/convoy_ros/convoy_safety/
-    cp build/lateral_control/compile_commands.json src/convoy_ros/lateral_control/
-    cp build/longitudinal_control/compile_commands.json src/convoy_ros/longitudinal_control/
     cd -
 }
 
@@ -173,7 +168,6 @@ git-pull-common() {
     cd ~/Documents/LaTeX_templates && git pull
     cd ~/Documents/neu-courses && git pull
     cd ~/Documents/resources && git pull
-    git submodule update --init --recursive --remote
     cd ~/Documents
 }
 
@@ -181,13 +175,11 @@ git-pull-convoy() {
     cd ~/projects/convoy_notebooks && git pull
     cd ~/cvy_ws/src/pozyx_ros && git pull 
     cd ~/cvy_ws/src/convoy_ros && git pull 
-    git submodule update --remote
 }
 
 git-pull-vehicle() {
     cd ~/cvy_ws/src/pozyx_ros && git pull
     cd ~/cvy_ws/src/convoy_ros && git pull
-    git submodule update --remote
 }
 
 ## Update dot files ##
