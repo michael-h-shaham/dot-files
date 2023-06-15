@@ -175,11 +175,15 @@ git-pull-convoy() {
     cd ~/projects/convoy_notebooks && git pull
     cd ~/cvy_ws/src/pozyx_ros && git pull 
     cd ~/cvy_ws/src/convoy_ros && git pull 
+    git submodule update --remote
 }
 
 git-pull-vehicle() {
     cd ~/cvy_ws/src/pozyx_ros && git pull
     cd ~/cvy_ws/src/convoy_ros && git pull
+    git submodule update --remote
+    cd ~/cvy_ws/src/f1tenth_system && git pull
+    git submodule update --remote
 }
 
 ## Update dot files ##
