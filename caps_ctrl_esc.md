@@ -4,17 +4,8 @@ These notes will likely only be used by Michael for his benefit.
 
 ## Map caps lock to esc/ctrl
 
-Easier method is to use the Gnome Tweaks tool.
-
-```
-sudo apt install gnome-tweaks
-```
-
-Then hit the super (Windows) key and search for `Tweaks` and open it. Go to the 
-`Keyboard & Mouse` section, hit `Additional Layout Options`, then 
-`Caps Lock behavior` and select `Make Caps Lock an additional Esc`.
-
-Another option is to use `keyd`, as described below. This is copied from the 
+I use `keyd` for this (though there's probably other ways). 
+The instructions below are copied from the 
 [keyd GitHub page](https://github.com/rvaiya/keyd).
 
 ```bash
