@@ -89,6 +89,7 @@ update-dot-files() {
 }
 
 git-pull-common() {
+  cd ~/projects/scratch && git pull
   cd ~/Documents/michael-shaham.github.io && git pull
   cd ~/Documents/mshaham-resume-cv && git pull
   cd ~/dot-files && git pull
