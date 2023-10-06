@@ -102,6 +102,7 @@ git-pull-common() {
 
 git-pull-convoy() {
   cd ~/projects/convoy_notebooks && git pull
+  cd ~/projects/convoy-gym && git pull
   cd ~/projects/pozyx_ros && git pull
   cd ~/projects/convoy_ros && git pull
   cd ~/projects
