@@ -125,6 +125,12 @@ fi
 
 alias mkdir="mkdir -p"
 
+## Convoy Gym ""
+
+source-convoy-gym() {
+    source ~/projects/convoy-gym/venv/bin/activate
+}
+
 ## ROS 2 ##
 
 source-foxy() {

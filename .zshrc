@@ -79,6 +79,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+source-convoy-gym() {
+  source ~/projects/convoy-gym/venv/bin/activate
+}
+
 update-dot-files() {
   cd ~/dot-files && git pull
   cp ~/dot-files/.zshrc ~/.zshrc
