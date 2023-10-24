@@ -6,6 +6,7 @@ call plug#begin()
     Plug 'VundleVim/Vundle.vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'tpope/vim-commentary'
+    Plugin 'davidhalter/jedi-vim'
 call plug#end()
 
 " Map commentary keycodes to ctrl-/ on linux (hopefully), ctrl-_ on mac
