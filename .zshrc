@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 source-convoy-gym() {
-  source ~/projects/convoy-gym/.convoy_env/bin/activate
+  source ~/projects/platoon-gym/.platoon_gym/bin/activate
 }
 
 update-dot-files() {

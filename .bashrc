@@ -127,8 +127,8 @@ alias mkdir="mkdir -p"
 
 ## Convoy Gym ""
 
-source-convoy-gym() {
-    source ~/projects/convoy-gym/.convoy_env/bin/activate
+source-platoon-gym() {
+    source ~/projects/platoon-gym/.platoon_env/bin/activate
 }
 
 ## ROS 2 ##
