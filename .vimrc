@@ -55,6 +55,7 @@ autocmd FileType xml setlocal ts=2 sts=2 sw=2
 
 " add vertical color bar
 :set colorcolumn=81
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " always show file name (second line sets it to be full path)
 set laststatus=2
