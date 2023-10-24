@@ -128,7 +128,7 @@ alias mkdir="mkdir -p"
 ## Convoy Gym ""
 
 source-convoy-gym() {
-    source ~/projects/convoy-gym/venv/bin/activate
+    source ~/projects/convoy-gym/.convoy_env/bin/activate
 }
 
 ## ROS 2 ##
