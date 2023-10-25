@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source-convoy-gym() {
+source-platoon-gym() {
   source ~/projects/platoon-gym/.platoon_gym/bin/activate
 }
 
