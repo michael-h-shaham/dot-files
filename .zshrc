@@ -80,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 source-platoon-gym() {
-  source ~/projects/platoon-gym/.platoon_gym/bin/activate
+  source ~/projects/platoon-gym/.platoon_env/bin/activate
 }
 
 update-dot-files() {
