@@ -125,7 +125,13 @@ fi
 
 alias mkdir="mkdir -p"
 
-## Convoy Gym ""
+## F1tenth Gym ##
+
+source-f1tenth() {
+    source ~/projects/river-f1tenth/.f1tenth_env/bin/activate
+}
+
+## Convoy Gym ##
 
 source-platoon-gym() {
     source ~/projects/platoon-gym/.platoon_env/bin/activate
