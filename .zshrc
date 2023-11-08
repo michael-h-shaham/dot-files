@@ -97,23 +97,25 @@ update-dot-files() {
 }
 
 git-pull-common() {
-  cd ~/projects/scratch && git pull
-  cd ~/Documents/michael-shaham.github.io && git pull
-  cd ~/Documents/mshaham-resume-cv && git pull
-  cd ~/dot-files && git pull
-  cd ~/Documents/notes && git pull
-  cd ~/Documents/LaTeX_templates && git pull
-  cd ~/Documents/neu-courses && git pull
-  cd ~/Documents/resources && git pull
-  cd ~/Documents
+  start_dir=$(pwd)
+  echo "scratch:" && cd ~/projects/scratch && git pull
+  echo "website:" && cd ~/Documents/michael-shaham.github.io && git pull
+  echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
+  echo "dot-files:" && cd ~/dot-files && git pull
+  echo "notes:" && cd ~/Documents/notes && git pull
+  echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
+  echo "neu-courses:" && cd ~/Documents/neu-courses && git pull
+  echo "resources:" && cd ~/Documents/resources && git pull
+  cd $start_dir
 }
 
 git-pull-convoy() {
-  cd ~/projects/convoy_notebooks && git pull
-  cd ~/projects/platoon-gym && git pull
-  cd ~/projects/pozyx_ros && git pull
-  cd ~/projects/convoy_ros && git pull
-  cd ~/projects
+  start_dir=$(pwd)
+  echo "convoy notebooks:" && cd ~/projects/convoy_notebooks && git pull
+  echo "platoon-gym:" && cd ~/projects/platoon-gym && git pull
+  echo "pozyx_ros:" && cd ~/projects/pozyx_ros && git pull
+  echo "convoy_ros:" && cd ~/projects/convoy_ros && git pull
+  cd $start_dir
 }
 
 # export MANPATH="/usr/local/man:$MANPATH"
