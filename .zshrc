@@ -79,6 +79,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+source-f1tenth() {
+  source ~/projects/river-f1tenth/.f1tenth_env/bin/activate
+}
+
 source-platoon-gym() {
   source ~/projects/platoon-gym/.platoon_env/bin/activate
 }
