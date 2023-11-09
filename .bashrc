@@ -187,10 +187,11 @@ git-pull-common() {
 
 git-pull-convoy() {
     start_dir=$(pwd)
-    echo "convoy notebooks:" && cd ~/projects/convoy_notebooks && git pull
+    echo "convoy_notebooks:" && cd ~/projects/convoy_notebooks && git pull
     echo "platoon-gym:" && cd ~/projects/platoon-gym && git pull
     echo "pozyx_ros:" && cd ~/cvy_ws/src/pozyx_ros && git pull 
     echo "convoy_ros:" && cd ~/cvy_ws/src/convoy_ros && git pull 
+    echo "river-f1tenth:" && cd ~/projects/river-f1tenth && git pull 
     git submodule update --remote
     cd $start_dir
 }
