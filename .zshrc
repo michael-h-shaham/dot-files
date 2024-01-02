@@ -115,6 +115,7 @@ git-pull-convoy() {
   echo "platoon-gym:" && cd ~/projects/platoon-gym && git pull
   echo "pozyx_ros:" && cd ~/projects/pozyx_ros && git pull
   echo "convoy_ros:" && cd ~/projects/convoy_ros && git pull
+  git submodule update --remote
   echo "river-f1tenth:" && cd ~/projects/river-f1tenth && git pull
   cd $start_dir
 }
