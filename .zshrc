@@ -98,10 +98,10 @@ update-dot-files() {
 
 git-pull-common() {
   start_dir=$(pwd)
-  echo "scratch:" && cd ~/projects/scratch && git pull
   echo "website:" && cd ~/Documents/michael-shaham.github.io && git pull
   echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
   echo "dot-files:" && cd ~/dot-files && git pull
+  echo "learning:" && cd ~/Documents/learning && git pull
   echo "notes:" && cd ~/Documents/notes && git pull
   echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
   echo "neu-courses:" && cd ~/Documents/neu-courses && git pull
