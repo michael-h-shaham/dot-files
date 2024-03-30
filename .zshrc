@@ -80,11 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 source-f1tenth() {
-  source ~/Documents/river-f1tenth/.f1tenth_env/bin/activate
+  source ~/phd/river-f1tenth/.f1tenth_env/bin/activate
 }
 
 source-platoon-gym() {
-  source ~/Documents/platoon-gym/.platoon_env/bin/activate
+  source ~/phd/platoon-gym/.platoon_env/bin/activate
 }
 
 update-dot-files() {
@@ -102,21 +102,21 @@ git-pull-common() {
   echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
   echo "dot-files:" && cd ~/dot-files && git pull
   echo "learning:" && cd ~/Documents/learning && git pull
-  echo "notes:" && cd ~/Documents/notes && git pull
-  echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
-  echo "neu-courses:" && cd ~/Documents/neu-courses && git pull
+  echo "notes:" && cd ~/phd/notes && git pull
+  echo "LaTeX_templates:" && cd ~/phd/LaTeX_templates && git pull
+  echo "neu-courses:" && cd ~/phd/neu-courses && git pull
   echo "resources:" && cd ~/Documents/resources && git pull
   cd $start_dir
 }
 
 git-pull-convoy() {
   start_dir=$(pwd)
-  echo "convoy notebooks:" && cd ~/Documents/convoy_notebooks && git pull
-  echo "platoon-gym:" && cd ~/Documents/platoon-gym && git pull
-  echo "pozyx_ros:" && cd ~/Documents/pozyx_ros && git pull
-  echo "convoy_ros:" && cd ~/Documents/convoy_ros && git pull
+  echo "convoy notebooks:" && cd ~/phd/convoy_notebooks && git pull
+  echo "platoon-gym:" && cd ~/phd/platoon-gym && git pull
+  echo "pozyx_ros:" && cd ~/phd/pozyx_ros && git pull
+  echo "convoy_ros:" && cd ~/phd/convoy_ros && git pull
   git submodule update --remote
-  echo "river-f1tenth:" && cd ~/Documents/river-f1tenth && git pull
+  echo "river-f1tenth:" && cd ~/phd/river-f1tenth && git pull
   cd $start_dir
 }
 
