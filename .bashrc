@@ -125,6 +125,12 @@ fi
 
 alias mkdir="mkdir -p"
 
+## Various python environments ##
+
+source-learning() {
+    source ~/Documents/learning/.learning_env/bin/activate
+}
+
 ## F1tenth Gym ##
 
 source-f1tenth() {
@@ -149,7 +155,6 @@ source-foxy() {
 source-convoy() {
     source-foxy
     source ~/cvy_ws/install/local_setup.bash
-    # export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 }
 
 source-vehicle() {
