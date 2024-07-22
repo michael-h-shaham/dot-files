@@ -152,14 +152,21 @@ source-foxy() {
     source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
 }
 
-source-convoy() {
+source-humble() {
+    source /opt/ros/humble/setup.bash
+    source /usr/share/colcon_cd/function/colcon_cd.sh
+    export _colcon_cd_root=/opt/ros/humble/
+    source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+}
+
+source-convoy-foxy() {
     source-foxy
     source ~/cvy_ws/install/local_setup.bash
 }
 
-source-vehicle() {
-    source-convoy
-    export ROS_DOMAIN_ID=$1
+source-convoy-humble() {
+    source-humble
+    source ~/cvy_ws/install/local_setup.bash
 }
 
 build-convoy() {
@@ -242,14 +249,14 @@ export GRB_LICENSE_FILE="/opt/gurobi/gurobi.lic"
 ## Conda ##
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mshaham/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/mshaham/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/mshaham/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mshaham/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/mshaham/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mshaham/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/mshaham/anaconda3/bin:$PATH"
+        export PATH="/home/mshaham/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -258,4 +265,5 @@ unset __conda_setup
 ## LaTeX ##
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+export PATH=/usr/local/texlive/2024/bin/x86_64-linux:$PATH
 
