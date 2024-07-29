@@ -192,7 +192,6 @@ git-pull-common() {
     echo "learning:" && cd ~/Documents/learning && git pull
     echo "notes:" && cd ~/Documents/notes && git pull
     echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
-    echo "neu-courses:" && cd ~/Documents/neu-courses && git pull
     echo "resources:" && cd ~/Documents/resources && git pull
     cd $start_dir
 }
