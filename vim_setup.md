@@ -1,5 +1,8 @@
 # Vim setup
 
+## Extensions setup: GitHub CoPilot
+Follow the instructions [here](https://github.com/github/copilot.vim).
+
 ## Extensions setup: Python autocomplete
 
 Run the following:
