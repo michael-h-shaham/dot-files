@@ -129,24 +129,6 @@ fi
 
 alias mkdir="mkdir -p"
 
-## Various python environments ##
-
-source-learning() {
-    source ~/Documents/learning/.learning_env/bin/activate
-}
-
-## F1tenth Gym ##
-
-source-f1tenth() {
-    source ~/Documents/river-f1tenth/.f1tenth_env/bin/activate
-}
-
-## Convoy Gym ##
-
-source-platoon-gym() {
-    source ~/Documents/platoon-gym/.platoon_env/bin/activate
-}
-
 ## ROS 2 ##
 
 source-foxy() {

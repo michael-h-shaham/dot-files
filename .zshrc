@@ -79,22 +79,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source-venv() {
-  source ~/.venv/bin/activate
-}
-
-source-learning() {
-  source ~/Documents/learning/.learning_env/bin/activate
-}
-
-source-f1tenth() {
-  source ~/Documents/river-f1tenth/.f1tenth_env/bin/activate
-}
-
-source-platoon-gym() {
-  source ~/Documents/platoon-gym/.platoon_env/bin/activate
-}
-
 update-dot-files() {
   cd ~/dot-files && git pull
   cp ~/dot-files/.zshrc ~/.zshrc
