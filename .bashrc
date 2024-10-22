@@ -176,7 +176,7 @@ git-pull-common() {
     echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
     echo "dot-files:" && cd ~/dot-files && git pull
     echo "learning:" && cd ~/Documents/learning && git pull
-    echo "notes:" && cd ~/Documents/notes && git pull
+    echo "phd_notes:" && cd ~/Documents/phd_notes && git pull
     echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
     echo "resources:" && cd ~/Documents/resources && git pull
     cd $start_dir

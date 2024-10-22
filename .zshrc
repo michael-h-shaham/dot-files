@@ -79,6 +79,22 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+source-venv() {
+# source ~/.venv/bin/activate  # commented out by conda initialize
+}
+
+source-learning() {
+# source ~/learning/.learning_env/bin/activate  # commented out by conda initialize
+}
+
+source-f1tenth() {
+# source ~/river-f1tenth/.f1tenth_env/bin/activate  # commented out by conda initialize
+}
+
+source-platoon-gym() {
+# source ~/platoon-gym/.platoon_env/bin/activate  # commented out by conda initialize
+}
+
 update-dot-files() {
   cd ~/dot-files && git pull
   cp ~/dot-files/.zshrc ~/.zshrc
@@ -94,7 +110,7 @@ git-pull-common() {
   echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
   echo "dot-files:" && cd ~/dot-files && git pull
   echo "learning:" && cd ~/learning && git pull
-  echo "notes:" && cd ~/research/notes && git pull
+  echo "phd_notes:" && cd ~/research/phd_notes && git pull
   echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
   echo "resources:" && cd ~/resources && git pull
   cd $start_dir
@@ -134,4 +150,20 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
