@@ -79,22 +79,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source-venv() {
-# source ~/.venv/bin/activate  # commented out by conda initialize
-}
-
-source-learning() {
-# source ~/learning/.learning_env/bin/activate  # commented out by conda initialize
-}
-
-source-f1tenth() {
-# source ~/river-f1tenth/.f1tenth_env/bin/activate  # commented out by conda initialize
-}
-
-source-platoon-gym() {
-# source ~/platoon-gym/.platoon_env/bin/activate  # commented out by conda initialize
-}
-
 update-dot-files() {
   cd ~/dot-files && git pull
   cp ~/dot-files/.zshrc ~/.zshrc
