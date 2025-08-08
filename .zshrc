@@ -88,28 +88,6 @@ update-dot-files() {
   cd -
 }
 
-git-pull-common() {
-  start_dir=$(pwd)
-  echo "website:" && cd ~/Documents/michael-shaham.github.io && git pull
-  echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
-  echo "dot-files:" && cd ~/dot-files && git pull
-  echo "learning:" && cd ~/learning && git pull
-  echo "phd_notes:" && cd ~/research/phd_notes && git pull
-  echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
-  echo "resources:" && cd ~/resources && git pull
-  cd $start_dir
-}
-
-git-pull-convoy() {
-  start_dir=$(pwd)
-  echo "convoy notebooks:" && cd ~/research/convoy_notebooks && git pull
-  echo "platoon-gym:" && cd ~/research/platoon-gym && git pull
-  echo "pozyx_ros:" && cd ~/research/pozyx_ros && git pull
-  echo "convoy_ros:" && cd ~/research/convoy_ros && git pull && git submodule update --remote
-  echo "river-f1tenth:" && cd ~/research/river-f1tenth && git pull && git submodule update --remote
-  cd $start_dir
-}
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -133,21 +111,4 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+# alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
