@@ -88,6 +88,28 @@ update-dot-files() {
   cd -
 }
 
+git-pull-common() {
+  start_dir=$(pwd)
+  echo "website:" && cd ~/Documents/michael-shaham.github.io && git pull
+  echo "resume-cv:" && cd ~/Documents/mshaham-resume-cv && git pull
+  echo "dot-files:" && cd ~/dot-files && git pull
+  echo "learning:" && cd ~/learning && git pull
+  echo "phd_notes:" && cd ~/research/phd_notes && git pull
+  echo "LaTeX_templates:" && cd ~/Documents/LaTeX_templates && git pull
+  echo "resources:" && cd ~/resources && git pull
+  cd $start_dir
+}
+
+git-pull-convoy() {
+  start_dir=$(pwd)
+  echo "convoy notebooks:" && cd ~/research/convoy_notebooks && git pull
+  echo "platoon-gym:" && cd ~/research/platoon-gym && git pull
+  echo "pozyx_ros:" && cd ~/research/pozyx_ros && git pull
+  echo "convoy_ros:" && cd ~/research/convoy_ros && git pull && git submodule update --remote
+  echo "river-f1tenth:" && cd ~/research/river-f1tenth && git pull && git submodule update --remote
+  cd $start_dir
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -111,4 +133,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+alias cmake="cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
