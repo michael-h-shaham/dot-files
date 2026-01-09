@@ -14,6 +14,7 @@ set wildmenu
 " UI
 set number
 set relativenumber
+set colorcolumn=100
 set hlsearch
 set incsearch
 
